@@ -13,7 +13,7 @@ import {
 } from '@expo-google-fonts/archivo';
 
 import { Home } from './src/screens/Home';
-import theme from './styles/theme';
+import theme from './src/styles/theme';
 
 
 export default function App() {

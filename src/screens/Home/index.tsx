@@ -1,13 +1,20 @@
 import React from 'react';
-
-import { Container, Title } from './styles';
+import { StatusBar } from 'react-native';
+import { Logo } from '../../assets/logo.svg'
+import { Container, Header } from './styles';
 
 export function Home(){
     return (
         <Container>
-            <Title>
-                HOME
-            </Title>
+            <StatusBar 
+            barStyle='light-content'
+            backgroundColor='transparent'
+            translucent
+            />
+            <Header />
+            <Header>
+                <Logo />
+            </Header>
         </Container>
     )
 }

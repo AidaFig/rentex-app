@@ -1,6 +1,7 @@
 import React from "react";
 import GasolineSvg from "../../assets/gasoline.svg";
-import { 
+import { ICarData } from "./interface";
+import {
     Container,
     Details,
     Brand, 
@@ -9,21 +10,21 @@ import {
     Rent, 
     Period, 
     Price, 
-    Type, 
+    Type,
     CarImage
 } from './styles';
 
-export const Car = () => {
+export const Car = ({ data } : ICarData) => {
     return (
         <Container>
             <Details>
-                <Brand>audi</Brand>
-                <Name>Alguma coisa aqui</Name>
+                <Brand>{data.brand}</Brand>
+                <Name>{data.name}</Name>
 
                 <About>
                     <Rent>
-                        <Period>Ao dia</Period>
-                        <Price>R$ 120</Price>
+                        <Period>{data.rent.period}</Period>
+                        <Price>{`R$ ${data.rent.price}`}</Price>
                     </Rent>
 
                     <Type>
@@ -31,7 +32,7 @@ export const Car = () => {
                     </Type>
                 </About>
             </Details>
-            <CarImage source={{uri: 'https://www.pngall.com/wp-content/uploads/2016/05/Audi-PNG-Picture.png'}} />
+            <CarImage data={data.thumbnail} />
         </Container>
     )
 }

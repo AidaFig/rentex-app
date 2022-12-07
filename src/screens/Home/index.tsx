@@ -15,6 +15,15 @@ export function Home(){
         },
         thumbnail: 'https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png',
     }
+    const carDataTwo = {
+        brand: 'Porsche',
+        name: 'Panamera',
+        rent: {
+            period: 'Ao dia',
+            price: 340,
+        },
+        thumbnail: 'https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png',
+    }
     return (
         <Container>
             <StatusBar 
@@ -34,6 +43,7 @@ export function Home(){
                 </HeaderContainer>
             </Header>
             <Car data={carDataOne}/>
+            <Car data={carDataTwo}/>
         </Container>
     )
 }

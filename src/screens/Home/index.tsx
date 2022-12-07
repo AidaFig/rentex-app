@@ -6,6 +6,15 @@ import { Car } from '../../components/Car'
 import { Container, Header, TotalCars, HeaderContainer } from './styles';
 
 export function Home(){
+    const carDataOne = {
+        brand: 'Audi',
+        name: 'RS 5 Coupé',
+        rent: {
+            period: 'Ao dia',
+            price: 120,
+        },
+        thumbnail: 'https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png',
+    }
     return (
         <Container>
             <StatusBar 
@@ -24,7 +33,7 @@ export function Home(){
                     </TotalCars>
                 </HeaderContainer>
             </Header>
-            <Car />
+            <Car data={carDataOne}/>
         </Container>
     )
 }

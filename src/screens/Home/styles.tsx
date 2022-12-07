@@ -16,11 +16,11 @@ export const Header = styled.View`
 `
 
 export const HeaderContainer = styled.View`
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 32px 24px;
-`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px;
+    `
 
 export const TotalCars = styled.Text`
     font-size: ${RFValue(15)}px;

@@ -56,7 +56,13 @@ export const Price  = styled.Text`
 
 export const Type   = styled.View``;
 
-export const CarImage  = styled.View`
+type PropTypeD = {
+    data: string;
+  };
+
+export const CarImage  = styled.View.attrs((props: PropTypeD) =>({
+    data: props.data,
+}))`
     width: 180px;
     height: 92px;
 `;

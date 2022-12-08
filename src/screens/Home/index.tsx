@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Logo  from '../../assets/logo.svg'
 import { Car } from '../../components/Car'
-import { Container, Header, TotalCars, HeaderContainer } from './styles';
+import { Container, Header, TotalCars, HeaderContainer, CarList } from './styles';
 
 export function Home(){
     const carDataOne = {
@@ -15,15 +15,7 @@ export function Home(){
         },
         thumbnail: 'https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png',
     }
-    const carDataTwo = {
-        brand: 'Porsche',
-        name: 'Panamera',
-        rent: {
-            period: 'Ao dia',
-            price: 340,
-        },
-        thumbnail: 'https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png',
-    }
+
     return (
         <Container>
             <StatusBar 
@@ -42,8 +34,13 @@ export function Home(){
                     </TotalCars>
                 </HeaderContainer>
             </Header>
-            <Car data={carDataOne}/>
-            <Car data={carDataTwo}/>
+            <CarList 
+                data={[1,2,3,4,5,6,7]} 
+                keyExtractor={item => String(item)} 
+                renderItem={({item}) => <Car data={carDataOne}/>}
+            />
+            
+
         </Container>
     )
 }

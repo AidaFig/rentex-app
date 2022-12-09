@@ -2,5 +2,5 @@
 
 export interface IBackButton {
     color?: string;
-    onPress: () => {};
+    onPress: (param: any) => void;
 }

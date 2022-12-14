@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { SafeAreaView } from 'react-native';
 
@@ -74,12 +75,17 @@ export const Header = styled.View`
     `;
 
     export const Accessories = styled.View`
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px 
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px; 
+    `;
 
-
+    export const Footer = styled.View`
+        width: 100%;
+        background-color: ${({ theme}) => theme.colors.background_primary};
+        padding: 24px 24px ;
+        /* padding-bottom: ${getBottomSpace() + 24}px; */
     `;

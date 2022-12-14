@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { Accessory } from '../../components/Accessory';
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
+import { Button } from '../../components/Button';
 
 import speedSvg from '../../assets/speed.svg';
 import accelerationSvg from '../../assets/acceleration.svg';
@@ -22,7 +24,8 @@ import {
     Period, 
     Price,
     About,
-    Accessories
+    Accessories,
+    Footer
 } from './styles';
 
 export const CarDetails = () => {
@@ -63,6 +66,11 @@ export const CarDetails = () => {
                 </About>
 
             </Content>
+
+                <Footer>
+                    <Button title='Confirmar'/>
+                </Footer>
+
         </Container>
     )    
 }
